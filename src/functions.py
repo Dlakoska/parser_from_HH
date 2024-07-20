@@ -42,7 +42,7 @@ def sorting(vacancies, n: int):
                 vac["salary"]["to"] = round(vac["salary"]["to"] * cb.Exchange[currency]["Value"] / cb.Exchange[currency]["Nominal"])
                 vac["salary"]["currency"] = f"RUR, выплата в {currency}"
 
-            sort_vac.append(Vacancy(vac['name'], vac['salary'], vac['url'], vac["snippet"]['requirement']))
+            sort_vac.append(Vacancy(vac['name'], vac['salary'], vac['alternate_url'], vac["snippet"]['requirement']))
         except TypeError as e:
             print(f"Ошибка при обработке вакансии: {vac}")
             print(e)
